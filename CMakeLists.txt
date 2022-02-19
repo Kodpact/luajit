@@ -603,3 +603,8 @@ configure_package_config_file(CMake/luajitConfig.cmake.in
 	src/luajitConfig.cmake
 	INSTALL_DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/luajit"
 	NO_CHECK_REQUIRED_COMPONENTS_MACRO)
+	
+install(FILES 
+	${CMAKE_CURRENT_BINARY_DIR}/luajitConfig.cmake
+	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/luajit
+	)

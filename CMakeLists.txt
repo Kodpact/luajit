@@ -596,3 +596,10 @@ if (LUAJIT_BUILD_EXE)
   install(TARGETS luajit DESTINATION "${CMAKE_INSTALL_BINDIR}")
 endif()
 
+
+include(CMakePackageConfigHelpers)
+
+configure_package_config_file(CMake/luajitConfig.cmake.in
+	src/luajitConfig.cmake
+	INSTALL_DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/luajit"
+	NO_CHECK_REQUIRED_COMPONENTS_MACRO)
